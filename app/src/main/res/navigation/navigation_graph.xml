@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/articlesFragment">
+
+    <fragment
+        android:id="@+id/articlesFragment"
+        android:name="com.example.nytime.ArticlesFragment"
+        android:label="ArticlesFragment" >
+        <action android:id="@+id/action_article_click_to_details_fragment" app:destination="@+id/articleDetailsFragment">
+            <argument android:name="send_article_model" app:argType="com.example.nytime.data.entities.Article" app:nullable="true"/>
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/articleDetailsFragment"
+        android:name="com.example.nytime.ArticleDetailsFragment"
+        android:label="fragment_article_details"
+        tools:layout="@layout/fragment_article_details" />
+
+
+</navigation>
